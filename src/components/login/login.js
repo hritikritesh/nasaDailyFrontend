@@ -21,8 +21,9 @@ const Login = ({setLoginUser}) => {
         
     }
     
-    const loginUrl = process.env.BACKEND_LOGIN_URL
+    const loginUrl = process.env.REACT_APP_LOGIN_URL
     const login = () => {
+        console.log(loginUrl)
         axios.post(loginUrl, user)
         .then(res => {
             alert(res.data.message)

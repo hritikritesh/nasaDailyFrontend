@@ -22,8 +22,7 @@ const Register = () => {
         })
     }
 
-    const registerUrl = process.env.BACKEND_REGISTER_URL
-
+    const registerUrl = process.env.REACT_APP_REGISTER_URL
     const register = () => {
         const {name, email, password, reEnterPassword} = user
         if(name && email && password ){
