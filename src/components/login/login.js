@@ -30,6 +30,13 @@ const Login = ({setLoginUser}) => {
         })
     }   
 
+    window.googleloginhandler = (response) => {
+        var userObject = jwt_decode(response.credential)
+        console.log(userObject)
+        alert("Login successful")
+        setLoginUser(userObject)
+    }
+
     return(
         <div className="login">
             {/* {console.log(user)} */}
@@ -39,6 +46,23 @@ const Login = ({setLoginUser}) => {
             <div className="button" onClick={login}>Login</div>
             <div>or</div>
             <div className="button" onClick={() => navigate("/register")}>Register</div>
+            <div id="g_id_onload"
+                data-client_id="348863221417-b2m8b0ulmv0li62ufassmp1traiu2isv.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="googleloginhandler"
+                data-nonce=""
+                data-auto_prompt="false">
+            </div>
+
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
         </div>
     )
 }

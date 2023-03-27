@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/"  element={user && user._id ? <Homepage setLoginUser={setLoginUser}/> : <Login setLoginUser={setLoginUser}/>}></Route>
+          <Route path="/"  element={user && user.email ? <Homepage setLoginUser={setLoginUser}/> : <Login setLoginUser={setLoginUser}/>}></Route>
           <Route path="/login" element={<Login setLoginUser={setLoginUser}/>}></Route>
           <Route path="/register" element={<Register/>}></Route>
         </Routes>
