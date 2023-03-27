@@ -22,12 +22,11 @@ const Register = () => {
         })
     }
 
-    const registerUrl = process.env.REACT_APP_REGISTER_URL
     const register = () => {
         const {name, email, password, reEnterPassword} = user
         if(name && email && password ){
             if(password === reEnterPassword){
-                axios.post(registerUrl, user)
+                axios.post("https://nasa-daily-backend.vercel.app/register", user)
                 .then(res => {
                     alert(res.data.message)
                     navigate("/login")

@@ -21,10 +21,8 @@ const Login = ({setLoginUser}) => {
         
     }
     
-    const loginUrl = process.env.REACT_APP_LOGIN_URL
     const login = () => {
-        console.log(loginUrl)
-        axios.post(loginUrl, user)
+        axios.post("https://nasa-daily-backend.vercel.app/login", user)
         .then(res => {
             alert(res.data.message)
             setLoginUser(res.data.user)
