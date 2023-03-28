@@ -12,7 +12,6 @@ const Homepage = ({setLoginUser}) => {
                 `https://api.nasa.gov/planetary/apod?api_key=dh1phaGCOFYz9S0Bjriu5skach5XbQRWZOUc7pCZ`
             )
             const data = await res.json()
-            console.log(data)
             setPhotoData(data)
         }
     }, [])

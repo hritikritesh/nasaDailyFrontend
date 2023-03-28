@@ -33,7 +33,6 @@ const Login = ({setLoginUser}) => {
 
     window.googleloginhandler = (response) => {
         var userObject = jwt_decode(response.credential)
-        console.log(userObject)
         alert("Login successful")
         setLoginUser(userObject)
     }
