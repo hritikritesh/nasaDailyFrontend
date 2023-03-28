@@ -16,6 +16,7 @@ User can also sign in with google.
 5. Axios to communicate with backend and pake requests.
 6. BrowserRouter, Routes, Route from react-router-dom for routing.
 7. useNavigate from react-router-dom for redirection.
+8. Script from https://accounts.google.com/gsi/client for google sign in.
 
 ## How to deploy on vercel
 
