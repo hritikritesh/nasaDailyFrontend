@@ -11,9 +11,9 @@ User can also sign in with google.
 
 1. React for making the react app.
 2. fetch() method to request data from NASA server.
-3. useState from react to take input from user.
+3. useState from react to locally store user information.
 4. jwt-decode to process google sign-in token.
-5. Axios to communicate with backend and pake requests.
+5. Axios to communicate with backend.
 6. BrowserRouter, Routes, Route from react-router-dom for routing.
 7. useNavigate from react-router-dom for redirection.
 8. Script from https://accounts.google.com/gsi/client for google sign in.
@@ -27,3 +27,9 @@ User can also sign in with google.
 5. During deployment select framework preset as "Create React App"
 6. Leave root directory as it is.
 7. Deploy !!
+
+## References
+1. https://legacy.reactjs.org/docs/getting-started.html
+2. https://vercel.com/docs/frameworks/create-react-app
+3. https://developers.google.com/identity/gsi/web/guides
+4. https://api.nasa.gov/
